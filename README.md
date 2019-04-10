@@ -1,2 +1,2 @@
 # beetcode
-My Alg practice on Leetcode. ( language: javascript / python / SQL )
+My Alg practice on [Leetcode](https://leetcode-cn.com). ( language: javascript / python / SQL )
