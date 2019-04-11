@@ -15,6 +15,6 @@ My Alg practice on [Leetcode](https://leetcode-cn.com). ( language: javascript /
 * Windows
   * Python (3.7.1) 
     * python -m venv beetcode.venv
-    * ./beetcode.venv/bin/activate.bat
-    * pip install --upgrade pip
+    * .\beetcode.venv\Scripts\activate.bat
+    * python -m pip install --upgrade pip
     * pip install -r requirements.txt
