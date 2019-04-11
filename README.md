@@ -4,6 +4,7 @@ My Alg practice on [Leetcode](https://leetcode-cn.com). ( language: javascript /
 * 考虑一题多解及最优解；
 * 用 Python 和 ES6 来实现，用 [lettuce](http://lettuce.it) 和 [jest](https://jestjs.io/zh-Hans/) 进行 TDD 验证;
 * 用 [DocToc](https://github.com/thlorenz/doctoc) 进行 markdown 文档的整理
+* 使用 Travis CI 进行持续集成测试
 
 环境：
 * macOS / Linux
@@ -15,6 +16,6 @@ My Alg practice on [Leetcode](https://leetcode-cn.com). ( language: javascript /
 * Windows
   * Python (3.7.1) 
     * python -m venv beetcode.venv
-    * ./beetcode.venv/bin/activate.bat
-    * pip install --upgrade pip
+    * .\beetcode.venv\Scripts\activate.bat
+    * python -m pip install --upgrade pip
     * pip install -r requirements.txt
