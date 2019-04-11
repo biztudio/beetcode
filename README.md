@@ -4,6 +4,7 @@ My Alg practice on [Leetcode](https://leetcode-cn.com). ( language: javascript /
 * 考虑一题多解及最优解；
 * 用 Python 和 ES6 来实现，用 [lettuce](http://lettuce.it) 和 [jest](https://jestjs.io/zh-Hans/) 进行 TDD 验证;
 * 用 [DocToc](https://github.com/thlorenz/doctoc) 进行 markdown 文档的整理
+* 使用 Travis CI 进行持续集成测试
 
 环境：
 * macOS / Linux
