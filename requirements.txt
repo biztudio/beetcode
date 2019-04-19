@@ -1,1 +1,1 @@
-lettuce==0.2.23
+behave==1.2.6
