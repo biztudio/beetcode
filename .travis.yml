@@ -9,10 +9,10 @@ matrix:
     #  - pip install -r requirements.txt
     # command to run tests
     script:
-      - python3 -m venv beetcode.venv
-      - source ./beetcode.venv/bin/activate
-      - pip3 install --upgrade pip
-      - pip3 install -r requirements.txt
+      #- python3 -m venv beetcode.venv
+      #- source ./beetcode.venv/bin/activate
+      #- pip3 install --upgrade pip
+      - pip install -r requirements.txt
       - cd ./problems/115
       - behave
 
