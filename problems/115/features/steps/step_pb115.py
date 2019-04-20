@@ -1,5 +1,5 @@
 from behave import given, when, then, step
-#from Solution import '../../pb115.py';
+from  pb115 import Solution
 
 @given(u'输入 S = "{string_s}"')
 def step_impl(step, string_s):
@@ -11,10 +11,11 @@ def step_impl(step, string_t):
 
 @when(u'计算一个字符串的子序列')
 def step_impl(step):  
-    #step.calculated_result =    
+    calKit = Solution()
+    step.calculated_result =  calKit.numDistinct(step.string_s, step.string_t)  
     pass
 
 @then(u'得到结果 {number:d}')
 def step_impl(step, number):
     print(number)
-    assert 3 == number
+    assert step.calculated_result == number
