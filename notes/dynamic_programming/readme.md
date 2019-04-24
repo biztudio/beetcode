@@ -6,6 +6,7 @@
 将一个根问题拆成几个子问题，分别求解这些子问题，即可推断出根问题的解。
 
 一言以蔽之：大事化小，小事化了。
+简单来说就是：递归可解+缓存重复分支，防止了不必要的递归。
 
 * 思考动态规划的第一点----最优子结构: 
   > 子问题最优时，母问题通过优化选择后一定最优的情况叫做“最优子结构”
@@ -24,3 +25,4 @@
 * [什么是动态规划？动态规划的意义是什么？](https://www.zhihu.com/question/23995189)
 * [动态规划初步·各种子序列问题](https://pks-loving.blog.luogu.org/junior-dynamic-programming-dong-tai-gui-hua-chu-bu-ge-zhong-zi-xu-lie)
 * [通过金矿模型介绍动态规划](http://www.cnblogs.com/sdjl/articles/1274312.html)
+* [漫画说算法--动态规划算法](https://blog.csdn.net/baidu_37107022/article/details/73189125)
