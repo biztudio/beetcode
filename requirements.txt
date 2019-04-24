@@ -1,1 +1,2 @@
 behave==1.2.6
+pysnooper==0.0.15
