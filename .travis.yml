@@ -13,7 +13,9 @@ matrix:
       #- source ./beetcode.venv/bin/activate
       #- pip3 install --upgrade pip
       - pip install -r requirements.txt
-      - cd ./problems/115
+      - cd ./problems/062
+      - behave
+      - cd ../../problems/115
       - behave
 
   - language: node_js
