@@ -30,8 +30,12 @@
   * 如果两个字母相同，值为左上角邻居值加 1
 
 
+**当遇到字符串的匹配问题的时候，通常可以考虑使用DP动态规划来解决**
+
+
 参考资料:
 * [什么是动态规划？动态规划的意义是什么？](https://www.zhihu.com/question/23995189)
 * [动态规划初步·各种子序列问题](https://pks-loving.blog.luogu.org/junior-dynamic-programming-dong-tai-gui-hua-chu-bu-ge-zhong-zi-xu-lie)
 * [通过金矿模型介绍动态规划](http://www.cnblogs.com/sdjl/articles/1274312.html)
 * [漫画说算法--动态规划算法](https://blog.csdn.net/baidu_37107022/article/details/73189125)
+* [一招解决4道leetcode题：动态规划在字符串匹配问题中的应用](https://ask.hellobi.com/blog/wenwen/11692)
