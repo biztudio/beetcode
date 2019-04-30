@@ -25,9 +25,13 @@ class Solution:
         if s_len < t_len or s_len < 1 or t_len < 1:
             return 0
 
-        check_len = t_len
-
         s_array = [sc for sc in s]
         t_array = [tc for tc in t]
+        dp = [[0 for _ in s] for _ in t]
+
+#        for si in range(s_len):
+#            for ti in range(t_len):
+#                if(s_array[si] == t_array[ti]):
+#                    pass
 
         return 5

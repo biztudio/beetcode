@@ -39,3 +39,4 @@
 * [通过金矿模型介绍动态规划](http://www.cnblogs.com/sdjl/articles/1274312.html)
 * [漫画说算法--动态规划算法](https://blog.csdn.net/baidu_37107022/article/details/73189125)
 * [一招解决4道leetcode题：动态规划在字符串匹配问题中的应用](https://ask.hellobi.com/blog/wenwen/11692)
+* [LeetCode动态规划题总结](https://www.cnblogs.com/shizhh/p/5302852.html)
