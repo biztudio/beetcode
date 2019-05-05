@@ -13,7 +13,7 @@ class Solution:
         但其实还是动态规划，我们一个定义二维数组dp，dp[i][j]为字符串s(0,i)变换到t(0,j)的变换方法的个数。
 
         画出表格，推导: 
-
+        从一个字符的子序列开始推导
         '''
 
         s_len = len(s)
@@ -31,9 +31,7 @@ class Solution:
             for col_index in range(s_len):
                 if s_array[col_index] == t_array[row_index]:
                     if row_index > 0:
-                        if col_index == 0:
-                             dp[row_index][col_index] =  dp[row_index - 1][col_index]
-                        else:
+                        if col_index > 0:
                              dp[row_index][col_index] =  dp[row_index - 1][col_index - 1] +  dp[row_index][col_index - 1]      
                     else:
                         dp[row_index][col_index] = dp[row_index][col_index - 1] + 1

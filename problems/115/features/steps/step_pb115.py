@@ -13,9 +13,7 @@ def step_impl(step, string_t):
 def step_impl(step):  
     calKit = Solution()
     step.calculated_result =  calKit.numDistinct(step.string_s, step.string_t)  
-    pass
 
 @then(u'得到结果 {number:d}')
 def step_impl(step, number):
-    print(number)
     assert step.calculated_result == number

@@ -56,6 +56,12 @@ Feature: 给定一个字符串 S 和一个字符串 T，计算在 S 的子序列
         When 计算一个字符串的子序列
         Then 得到结果 1    
 
+    Scenario: 3 个字符子序列 003
+        Given 输入 S = "dddd"
+        And 输入 T = "edd"
+        When 计算一个字符串的子序列
+        Then 得到结果 0       
+
      Scenario: 4 个字符子序列 001
         Given 输入 S = "rabbbit"
         And 输入 T = "abit"
