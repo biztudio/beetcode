@@ -30,7 +30,19 @@ Feature: 给定一个字符串 S 和一个字符串 T，计算在 S 的子序列
         Given 输入 S = "ababgbag"
         And 输入 T = "ag"
         When 计算一个字符串的子序列
-        Then 得到结果 5                  
+        Then 得到结果 5
+
+    Scenario: 2 个字符子序列 004
+        Given 输入 S = "ddd"
+        And 输入 T = "dd"
+        When 计算一个字符串的子序列
+        Then 得到结果 3        
+
+    Scenario: 2 个字符子序列 005
+        Given 输入 S = "dd"
+        And 输入 T = "dd"
+        When 计算一个字符串的子序列
+        Then 得到结果 1                   
 
     Scenario: 3 个字符子序列 001
         Given 输入 S = "ababgbag"
