@@ -2,7 +2,7 @@ import pysnooper
 
 class Solution:
     
-    #@pysnooper.snoop()
+    @pysnooper.snoop()
     def numDistinct(self, s: str, t: str) -> int:
         '''
         举例
@@ -11,6 +11,8 @@ class Solution:
 
         这道题不是求两个字符串是匹配，而是判断S有多少种方式可以得到T。
         但其实还是动态规划，我们一个定义二维数组dp，dp[i][j]为字符串s(0,i)变换到t(0,j)的变换方法的个数。
+
+        画出表格，推导: 
 
         '''
 
