@@ -1,0 +1,1 @@
+.\beetcode.venv\Scripts\activate.bat

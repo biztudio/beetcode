@@ -2,6 +2,7 @@
 # Created by https://www.gitignore.io/api/node,java,flask,django,pycharm,visualstudio,jupyternotebook,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,java,flask,django,pycharm,visualstudio,jupyternotebook,visualstudiocode
 beetcode.venv/
+.vscode/
 
 ### Django ###
 *.log
@@ -850,3 +851,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+/.vscode/settings.json
