@@ -32,7 +32,7 @@ class Solution:
                         if col_index == 0:
                              dp[row_index][col_index] =  dp[row_index - 1][col_index]
                         else:
-                             dp[row_index][col_index] =  dp[row_index - 1][col_index] +  dp[row_index][col_index - 1]      
+                             dp[row_index][col_index] =  dp[row_index - 1][col_index - 1] +  dp[row_index][col_index - 1]      
                     else:
                         dp[row_index][col_index] = dp[row_index][col_index - 1] + 1
                 else:
