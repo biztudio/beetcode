@@ -1,15 +1,16 @@
 from behave import given, when, then, step
 from  pb300 import Solution
 
-@given(u'输入 "{nums}"')
-def step_impl(step, nums):
-    step.nums = (nums)
+@given(u'Input {nums_string}')
+def step_impl(step, nums_string):
+    step.nums_string = (nums_string)
 
-@when(u'计算最长上升子序列的长度')
+@when(u'Calculate')
 def step_impl(step):  
     calKit = Solution()
-    step.calculated_result =  calKit.lengthOfLIS(step.nums)  
+    nums = [int(c) for c in step.nums_string.split(",")]
+    step.calculated_result =  calKit.lengthOfLIS(nums)  
 
-@then(u'得到结果 {number:d}')
+@then(u'Get Result {number:d}')
 def step_impl(step, number):
     assert step.calculated_result == number

@@ -1,7 +1,26 @@
-Feature: 给定一个无序的整数数组，找到其中最长上升子序列的长度
-   
-    Scenario: 1 个字符子序列 001
-        Given 输入 [10,9,2,5,3,7,101,18]
-        When 计算最长上升子序列的长度
-        Then 得到结果 4  
-   
+Feature: Given an unsorted array of integers, find the length of longest increasing subsequence.
+       
+    Scenario: 4,10,4,3,8,9
+        Given Input 4,10,4,3,8,9
+        When Calculate
+        Then Get Result 3    
+
+    Scenario: 10,2,5,3,7,101,18
+        Given Input 10,2,5,3,7,101,18
+        When Calculate
+        Then Get Result 4  
+
+    Scenario: 1,2,3
+        Given Input 1,2,3
+        When Calculate
+        Then Get Result 3 
+
+    Scenario: 3,2,1
+        Given Input 3,2,1
+        When Calculate
+        Then Get Result 1 
+
+    Scenario: 10,9,2,5,3,7,101,18
+        Given Input 10,9,2,5,3,7,101,18
+        When Calculate
+        Then Get Result 4          
