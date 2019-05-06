@@ -17,6 +17,9 @@ matrix:
       - behave
       - cd ../../problems/115
       - behave
+      - cd ../../problems/300
+      - behave
+      
 
   - language: node_js
     node_js:
