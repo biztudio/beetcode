@@ -1,7 +1,6 @@
 # beetcode
 
 [![Build Status](https://travis-ci.org/biztudio/beetcode.svg?branch=master)](https://travis-ci.org/biztudio/beetcode)
-[![Build Status](https://travis-ci.org/biztudio/beetcode.svg?branch=pb115)](https://travis-ci.org/biztudio/beetcode)
 
 My Alg practice on [Leetcode](https://leetcode-cn.com). ( language: javascript / python / SQL )
 
