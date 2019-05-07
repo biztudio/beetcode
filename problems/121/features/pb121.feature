@@ -1,26 +1,12 @@
-Feature: Given an unsorted array of integers, find the length of longest increasing subsequence.
+Feature: Best Time to Buy and Sell Stock
        
-    Scenario: 4,10,4,3,8,9
-        Given Input 4,10,4,3,8,9
+    Scenario: 7,1,5,3,6,4
+        Given Input 7,1,5,3,6,4
         When Calculate
-        Then Get Result 3    
+        Then Get Result 5    
 
-    Scenario: 10,2,5,3,7,101,18
-        Given Input 10,2,5,3,7,101,18
+    Scenario: 7,6,4,3,1
+        Given Input 7,6,4,3,1
         When Calculate
-        Then Get Result 4  
-
-    Scenario: 1,2,3
-        Given Input 1,2,3
-        When Calculate
-        Then Get Result 3 
-
-    Scenario: 3,2,1
-        Given Input 3,2,1
-        When Calculate
-        Then Get Result 1 
-
-    Scenario: 10,9,2,5,3,7,101,18
-        Given Input 10,9,2,5,3,7,101,18
-        When Calculate
-        Then Get Result 4          
+        Then Get Result 0  
+ 
