@@ -13,9 +13,14 @@ class Solution:
         dp = [0 for p in prices]
         
         for price_index in range(1, prices_count):
+            if prices[price_index] <= 0 or \
+               prices[price_index] <= prices[price_index - 1] or \
+               dp[price_index - 1] > prices[price_index]:
+                dp[price_index] = dp[price_index - 1]
+                continue
+
             for j in range(price_index):
                 diff = prices[price_index] - prices[j]
-                if diff > 0:
-                    pass
+                dp[price_index] = max(dp[price_index], dp[price_index - 1], diff)
 
-        return 5
+        return dp[-1]
