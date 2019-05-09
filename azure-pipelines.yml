@@ -21,11 +21,23 @@ steps:
 - script: |
     cd ./problems/062
     behave
-    cd ../../problems/115
-    behave
-    cd ../../problems/121
-    behave
-    cd ../../problems/300
+    echo Done
+  displayName: 'Run BDD script for Problem 062'
+
+- script: |
+    cd ./problems/115
     behave
     echo Done
-  displayName: 'Run a multi-line BDD script'
+  displayName: 'Run BDD script for Problem 115'
+
+- script: |
+    cd ./problems/121
+    behave
+    echo Done
+  displayName: 'Run BDD script for Problem 121'  
+
+- script: |
+    cd ./problems/300
+    behave
+    echo Done
+  displayName: 'Run BDD script for Problem 300'    
