@@ -3,7 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=node,java,flask,django,pycharm,visualstudio,jupyternotebook,visualstudiocode
 beetcode.venv/
 .vscode/
-
+.idea/
 ### Django ###
 *.log
 *.pot
