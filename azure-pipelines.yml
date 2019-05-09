@@ -10,10 +10,22 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.6'
+    architecture: 'x64'
+
+- script: pip install -r requirements.txt
+  displayName: 'Install requirements'    
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    cd ./problems/062
+    behave
+    cd ../../problems/115
+    behave
+    cd ../../problems/121
+    behave
+    cd ../../problems/300
+    behave
+    echo Done
+  displayName: 'Run a multi-line BDD script'
