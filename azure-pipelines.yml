@@ -9,35 +9,47 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
-steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.6'
-    architecture: 'x64'
+stages:
+# - Prepare
+# - TestBehavior
+- stage: Prepare
+  displayName: Prepare Lib for Python & Nodejs
+  dependsOn: [] # by specifying an empty array, this stage doesn't depend on the stage before it
+  jobs:
+  - job: Prepare Python Env
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '3.6'
+        architecture: 'x64'
+    - script: pip install -r requirements.txt
+      displayName: 'Install requirements'    
 
-- script: pip install -r requirements.txt
-  displayName: 'Install requirements'    
+- stage: TestBehavior
+  displayName: BUild & Test Python Code for Problems
+  jobs:
+  - job: Test Python Code
+    steps:
+    - script: |
+        cd ./problems/062
+        behave
+        echo Done
+      displayName: 'Run BDD script for Problem 062'
 
-- script: |
-    cd ./problems/062
-    behave
-    echo Done
-  displayName: 'Run BDD script for Problem 062'
+    - script: |
+        cd ./problems/115
+        behave
+        echo Done
+      displayName: 'Run BDD script for Problem 115'
 
-- script: |
-    cd ./problems/115
-    behave
-    echo Done
-  displayName: 'Run BDD script for Problem 115'
+    - script: |
+        cd ./problems/121
+        behave
+        echo Done
+      displayName: 'Run BDD script for Problem 121'  
 
-- script: |
-    cd ./problems/121
-    behave
-    echo Done
-  displayName: 'Run BDD script for Problem 121'  
-
-- script: |
-    cd ./problems/300
-    behave
-    echo Done
-  displayName: 'Run BDD script for Problem 300'    
+    - script: |
+        cd ./problems/300
+        behave
+        echo Done
+      displayName: 'Run BDD script for Problem 300'    
