@@ -45,6 +45,9 @@ jobs:
 
   - job: TestJavascriptCode
     pool:
-      vmImage: 'Ubuntu-16.04'
+      vmImage: 'Ubuntu-16.04'       
     steps:
-      - script: echo Test Javascript
+      - task: NodeTool@0 
+        inputs:
+          versionSpec: '10.x'
+      - script: npm install

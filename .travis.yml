@@ -28,6 +28,6 @@ matrix:
       - "10"  
     # command to install dependencies
     install:
-      - yarn
+      - npm i
     script:
       - echo 'Test javascript'      
