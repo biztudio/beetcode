@@ -5,7 +5,7 @@
 My Alg practice on [My Leetcode](https://leetcode-cn.com/biztudio/). ( language: javascript / python / SQL )
 
 * 考虑一题多解及最优解；
-* 用 Python 和 ES6 来实现，用 [behave](http://behave.github.io/behave.example/) 和 [jest](https://jestjs.io/zh-Hans/) 进行 TDD 验证;
+* 用 Python 和 ES6 来实现，用 [behave](http://behave.github.io/behave.example/) 和 [jest](https://jestjs.io/zh-Hans/) 进行 BDD / TDD 验证;
 * 用 [DocToc](https://github.com/thlorenz/doctoc) 进行 markdown 文档的整理
 * 使用 [Azure DevOps Pipeline](https://dev.azure.com/biztudioCI/beetcode/_build) 进行持续集成测试
 
