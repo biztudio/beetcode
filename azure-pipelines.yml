@@ -35,7 +35,13 @@ jobs:
         cd ./problems/121
         behave
         echo Done
-      displayName: 'Run BDD script for Problem 121'  
+      displayName: 'Run BDD script for Problem 121' 
+
+    - script: |
+        cd ./problems/169
+        behave
+        echo Done
+      displayName: 'Run BDD script for Problem 169'    
 
     - script: |
         cd ./problems/300
