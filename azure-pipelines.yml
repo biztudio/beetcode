@@ -49,6 +49,12 @@ jobs:
         echo Done
       displayName: 'Run BDD script for Problem 300'    
 
+    - script: |
+        cd ./problems/679
+        behave
+        echo Done
+      displayName: 'Run BDD script for Problem 679'      
+
   - job: TestJavascriptCode
     pool:
       vmImage: 'Ubuntu-16.04'       

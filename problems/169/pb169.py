@@ -20,10 +20,9 @@ class Solution:
             if num == temp_check_num:
                 check_flag = check_flag + 1
             else:
-                check_flag = check_flag - 1
-            
-            if check_flag == 0:
-                temp_check_num = num
-                check_flag = check_flag + 1
+                check_flag = check_flag - 1            
+                if check_flag == 0:
+                    temp_check_num = num
+                    check_flag = check_flag + 1
 
         return temp_check_num
