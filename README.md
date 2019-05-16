@@ -22,3 +22,5 @@ My Alg practice on [My Leetcode](https://leetcode-cn.com/biztudio/). ( language:
     * .\beetcode.venv\Scripts\activate.bat
     * python -m pip install --upgrade pip
     * pip install -r requirements.txt
+  * Anaconda
+    * conda create -n beetcode.venv python=3.7.1
