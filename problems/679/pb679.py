@@ -21,7 +21,7 @@ class Solution:
             if validation:
                 break
             else:
-                cal_index = 1
+                cal_index = ref_index + 1
                 for cal_num in nums[cal_index:]:
 
                     if ref_index != cal_index:
