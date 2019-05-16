@@ -6,12 +6,6 @@ Feature: You have 4 cards each containing a number from 1 to 9. You need to judg
         Then Get Result True
 
 
-    Scenario: [4, 1, 8, 7] => true: (8-4) * (7-1) = 24
-        Given Input 4, 1, 8, 7
-        When Calculate
-        Then Get Result True
-
-
     Scenario: [1, 4, 7, 8] => true: (8-4) * (7-1) = 24
         Given Input 1, 4, 7, 8
         When Calculate
@@ -73,4 +67,4 @@ Feature: You have 4 cards each containing a number from 1 to 9. You need to judg
     Scenario: [14] => false 
         Given Input 14
         When Calculate
-        Then Get Result False            
+        Then Get Result False     

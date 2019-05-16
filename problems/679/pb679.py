@@ -9,34 +9,71 @@ class Solution:
     @pysnooper.snoop()
     def check_validation(self, nums, expected):
         num_count = len(nums)
+        validation = False
         if num_count < 1:
-            return False
+            return validation
         if num_count == 1:
             return nums[0] == expected
-        validation = False
+        
+        ref_index = 0
+        calculation = 0
+        for ref_num in nums:
+            if validation:
+                break
+            else:
+                cal_index = 0
+                for cal_num in nums:
 
-        new_expected = expected + nums[0]
-        validation = validation or self.check_validation(nums[1:], new_expected)
+                    if ref_index != cal_index:
 
-        new_expected = expected - nums[0]
-        validation = validation or self.check_validation(nums[1:], new_expected)
+                        next_nums = [nums[i] for i in range(num_count) if i != cal_index and i != ref_index]
 
-        new_expected = nums[0] - expected
-        validation = validation or self.check_validation(nums[1:], new_expected)
+                        if validation == False:
+                            calculation = ref_num + cal_num
+                            next_nums.append(calculation)
+                            validation = validation or self.check_validation(next_nums, expected)
+                            next_nums.pop()
 
-        new_expected = expected * nums[0]
-        validation = validation or self.check_validation(nums[1:], new_expected)
+                        if validation == False:
+                            calculation = ref_num - cal_num
+                            next_nums.append(calculation)
+                            #validation = validation or self.check_validation(next_nums, expected)
+                            next_nums.pop()
 
-        if nums[0] != 0:
-            new_expected = Fraction(expected, nums[0]) 
-            validation = validation or self.check_validation(nums[1:], new_expected)  
+                        if validation == False:
+                            calculation = cal_num - ref_num
+                            next_nums.append(calculation)
+                            #validation = validation or self.check_validation(next_nums, expected)
+                            next_nums.pop()
 
-        if expected != 0:
-            new_expected = Fraction(nums[0], expected) 
-            validation = validation or self.check_validation(nums[1:], new_expected)  
 
-        return validation    
+                        if validation == False:
+                            calculation = ref_num * cal_num
+                            next_nums.append(calculation)
+                            #validation = validation or self.check_validation(next_nums, expected)
+                            next_nums.pop()
+
+
+                        if validation == False and cal_num != 0:
+                            calculation = Fraction(ref_num, cal_num)
+                            next_nums.append(calculation)
+                            #validation = validation or self.check_validation(next_nums, expected)
+                            next_nums.pop()
+
+
+                        if validation == False and  ref_num != 0:
+                            calculation = Fraction(cal_num, ref_num)
+                            next_nums.append(calculation)
+                            #validation = validation or self.check_validation(next_nums, expected)
+                            next_nums.pop()
+
+
+                    cal_index = cal_index + 1
+
+                ref_index = ref_index + 1
+
+        return validation
     
-    @pysnooper.snoop()
+    #@pysnooper.snoop()
     def judgePoint24(self, nums) -> int:
         return self.check_validation(nums, self.EXPECTED_CONST())
