@@ -17,12 +17,12 @@ class Solution:
         
         ref_index = 0
         calculation = 0
-        for ref_num in nums:
+        for ref_num in nums[:-1]:
             if validation:
                 break
             else:
-                cal_index = 0
-                for cal_num in nums:
+                cal_index = 1
+                for cal_num in nums[cal_index:]:
 
                     if ref_index != cal_index:
 
