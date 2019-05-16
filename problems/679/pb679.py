@@ -6,7 +6,7 @@ class Solution:
     def EXPECTED_CONST(self):
         return 24
 
-    @pysnooper.snoop()
+    #@pysnooper.snoop()
     def check_validation(self, nums, expected):
         num_count = len(nums)
         validation = False
@@ -37,34 +37,34 @@ class Solution:
                         if validation == False:
                             calculation = ref_num - cal_num
                             next_nums.append(calculation)
-                            #validation = validation or self.check_validation(next_nums, expected)
+                            validation = validation or self.check_validation(next_nums, expected)
                             next_nums.pop()
 
                         if validation == False:
                             calculation = cal_num - ref_num
                             next_nums.append(calculation)
-                            #validation = validation or self.check_validation(next_nums, expected)
+                            validation = validation or self.check_validation(next_nums, expected)
                             next_nums.pop()
 
 
                         if validation == False:
                             calculation = ref_num * cal_num
                             next_nums.append(calculation)
-                            #validation = validation or self.check_validation(next_nums, expected)
+                            validation = validation or self.check_validation(next_nums, expected)
                             next_nums.pop()
 
 
                         if validation == False and cal_num != 0:
                             calculation = Fraction(ref_num, cal_num)
                             next_nums.append(calculation)
-                            #validation = validation or self.check_validation(next_nums, expected)
+                            validation = validation or self.check_validation(next_nums, expected)
                             next_nums.pop()
 
 
                         if validation == False and  ref_num != 0:
                             calculation = Fraction(cal_num, ref_num)
                             next_nums.append(calculation)
-                            #validation = validation or self.check_validation(next_nums, expected)
+                            validation = validation or self.check_validation(next_nums, expected)
                             next_nums.pop()
 
 
